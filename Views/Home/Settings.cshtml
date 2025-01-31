@@ -1,13 +1,30 @@
 ﻿@{
     ViewData["Title"] = "Settings";
 }
-<div class="text-center">
-    <h1 class="display-4">@ViewData["Title"]</h1>
-</div>
-<div>
-    <p>You Can Change User Settings Here</p>
-    <p>Change Username</p>
-    <p>Change Password</p>
-    <p>Change Email</p>
-    <p>Change Language</p>
-</div>
+<section class="vh-100" style="background-color: #D1E5F4; border-radius: 10px;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-top h-100">
+            <div class="col col-md-9 col-lg-7 col-xl-5">
+                <div class="card" style="border-radius: 15px;">
+                    <div class="card-body p-4">
+                        <div class="d-flex text-black">
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-1">@ViewData["Title"]</h5> <br />
+                                <p class="mb-2 pb-1" style="color: #2b2a2a;"><input type="text" id="uname" placeholder="Change Username"></input><button>⚙️</button></p>
+                                <p class="mb-2 pb-1" style="color: #2b2a2a;"><input type="text" id="upass" placeholder="Change Password"></input><button>⚙️</button></p>
+                                <p class="mb-2 pb-1" style="color: #2b2a2a;"><input type="text" id="umail" placeholder="Change Email"></input><button>⚙️</button></p> <br />
+
+                                <p class="mb-2 pb-1" style="color: #2b2a2a;"><b>Select Language: </b><br />
+                                    <input type="radio" id="ulang" name="ulang" value="en" checked="checked"/> <label for="en">en</label>
+                                    <input type="radio" id="ulang" name="ulang" value="tr" /> <label for="tr">tr</label>
+                                    <input type="radio" id="ulang" name="ulang" value="spa" /> <label for="spa">spa</label>
+                                    <input type="radio" id="ulang" name="ulang" value="ger" /> <label for="ger">ger</label>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

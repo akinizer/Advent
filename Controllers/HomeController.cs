@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Security.Claims;
 using Advent.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -32,7 +33,17 @@ namespace Advent.Controllers
         }
         public IActionResult Profile()
         {
-            return View();
+            return View(new UserProfileModel()
+            {
+                Username = Environment.UserName,
+                Password = "12345678",
+
+                Email = Environment.UserName + "@user.com",
+                Avatar = "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg",
+                Contact = "54321",
+                Language = "en",
+                SocialMedia = "AdvertBlog"
+            });
         }
         public IActionResult Settings()
         {
