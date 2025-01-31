@@ -17,12 +17,20 @@ namespace Advent.Controllers
         {
             return View();
         }
+        public IActionResult Blog()
+        {
+            return View();
+        }
         public IActionResult Events()
         {
             return View();
         }
 
         public IActionResult Details()
+        {
+            return View();
+        }
+        public IActionResult Profile()
         {
             return View();
         }
